@@ -1,59 +1,67 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Members Login — CYPPA</title>
-<meta name="description" content="Sign in to the CYPPA members area for access to resources, marketplace, and the pilot logbook." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Members Login — CYPPA</title>
+  <meta name="description"
+    content="Sign in to the CYPPA members area for access to resources, marketplace, and the pilot logbook." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<div class="login-wrap">
-  <aside class="login-art">
-    <a class="brand" href="index.html">
-      <span class="logo" style="background:rgba(255,255,255,.2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform:rotate(-45deg)"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3"/></svg></span>
-      <span class="brand-name" style="color:#fff">CYPPA</span>
-    </a>
-    <div>
-      <h2 style="font-size:2.25rem; line-height:1.15">Welcome back, pilot.</h2>
-      <p style="color:rgba(255,255,255,.85); margin-top:1rem; max-width:380px">Access your logbook, members' marketplace and exclusive resources.</p>
-    </div>
-    <p style="color:rgba(255,255,255,.7); font-size:.9rem">© <span id="yr1"></span> Cyprus Paragliding & Paramotor Association</p>
-  </aside>
+  <div class="login-wrap">
+    <aside class="login-art">
+      <a class="brand" href="index.html">
+        <img src="assets/Logo 01a Color.png" alt="CYPPA Logo" class="header-logo" />
+        <span class="brand-name" style="color:#fff">CYPPA</span>
+      </a>
+      <div>
+        <h2 style="font-size:2.25rem; line-height:1.15">Welcome back, pilot.</h2>
+        <p style="color:rgba(255,255,255,.85); margin-top:1rem; max-width:380px">Access your logbook, members'
+          marketplace and exclusive resources.</p>
+      </div>
+      <p style="color:rgba(255,255,255,.7); font-size:.9rem">© <span id="yr1"></span> Cyprus Paragliding & Paramotor
+        Association</p>
+    </aside>
 
-  <main class="login-form-wrap">
-    <div class="login-card">
-      <h1>Members Login</h1>
-      <p class="sub">Sign in with your CYPPA account credentials.</p>
+    <main class="login-form-wrap">
+      <div class="login-card">
+        <h1>Members Login</h1>
+        <p class="sub">Sign in with your CYPPA account credentials.</p>
 
-      <form class="form" onsubmit="event.preventDefault(); alert('Login flow will connect to your backend.');">
-        <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="you@example.com" required autocomplete="email" />
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input id="password" type="password" placeholder="••••••••" required autocomplete="current-password" />
-        </div>
-        <div class="form-row-between">
-          <label class="checkbox-row"><input type="checkbox" /> Remember me</label>
-          <a class="link-sky" href="#">Forgot password?</a>
-        </div>
-        <button class="btn btn-primary" type="submit">Sign in</button>
-      </form>
+        <form class="form" onsubmit="event.preventDefault(); alert('Login flow will connect to your backend.');">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="••••••••" required autocomplete="current-password" />
+          </div>
+          <div class="form-row-between">
+            <label class="checkbox-row"><input type="checkbox" /> Remember me</label>
+            <a class="link-sky" href="#">Forgot password?</a>
+          </div>
+          <button class="btn btn-primary" type="submit">Sign in</button>
+        </form>
 
-      <p style="text-align:center; color:var(--muted); font-size:.9rem; margin-top:1.5rem">
-        Not a member? <a class="link-sky" href="contact.html">Contact CYPPA</a>
-      </p>
-      <p style="text-align:center; margin-top:2rem"><a href="index.html" class="link-sky">← Back to website</a></p>
-    </div>
-  </main>
-</div>
+        <p style="text-align:center; color:var(--muted); font-size:.9rem; margin-top:1.5rem">
+          Not a member? <a class="link-sky" href="contact.html">Contact CYPPA</a>
+        </p>
+        <p style="text-align:center; margin-top:2rem"><a href="index.html" class="link-sky">← Back to website</a></p>
+      </div>
+    </main>
+  </div>
 
-<script>document.getElementById('yr1').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('yr1').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>
