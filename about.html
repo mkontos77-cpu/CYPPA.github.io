@@ -44,7 +44,19 @@
       </nav>
     </div>
   </header>
+  <div class="mobile-nav">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cy-air-space.html">CY-Air Space</a>
+      <a href="training.html">Training</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
 
+      <a class="btn btn-primary" href="login.html">
+        Members Login
+      </a>
+    </nav>
+  </div>
   <section class="page-hero">
 
     <img src="assets/Logo 01a Color.png" alt="" class="hero-watermark" aria-hidden="true" />
@@ -99,18 +111,66 @@
         </div>
       </div>
 
-      <div class="about-row">
-        <div class="icon"><svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
+      <div class="about-row mission-card" id="missionCard">
+        <div class="icon">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <circle cx="12" cy="12" r="6" />
             <circle cx="12" cy="12" r="2" />
-          </svg></div>
-        <div><span class="num">04</span>
-          <h2>Mission Statement</h2>
-          <p>To promote safety, develop pilots, advocate for the canopy aviation community, support competition, and act
-            as the regulatory voice of pilots before the Civil Aviation Authority.</p>
+          </svg>
         </div>
+
+        <div>
+          <span class="num">04</span>
+          <h2>Mission Statement</h2>
+          <p>
+            To promote safety, develop pilots, advocate for the canopy aviation community,
+            support competition, and act as the regulatory voice of pilots before the Civil Aviation Authority.
+          </p>
+        </div>
+      </div>
+
+      <div class="mission-details" id="missionDetails">
+
+        <h3>The Core Mission of CYPPA</h3>
+
+        <ul>
+          <li>Promote safety in canopy aviation activities in Cyprus</li>
+          <li>Promote canopy aviation activities in Cyprus</li>
+          <li>Promote a culture of respect and understanding for all who use the airspace on the island</li>
+
+          <li>
+            Provide guidelines for:
+            <ul>
+              <li>Training</li>
+              <li>Testing</li>
+              <li>Skill evaluation</li>
+            </ul>
+          </li>
+
+          <li>Make critical information available to pilots about the Cypriot aviation environment</li>
+          <li>Advocate for members’ rights</li>
+          <li>Promote athletes to international competitions</li>
+          <li>Promote competitions nationally in Cyprus</li>
+          <li>Suggest rules and regulations to the CCA to become laws</li>
+          <li>Promote good relations and understanding between the general Cypriot public and canopy pilots</li>
+          <li>Educate pilots regarding laws, regulations, airspace, rights and responsibilities</li>
+
+          <li>
+            Liaise with:
+            <ul>
+              <li>Environmental organizations</li>
+              <li>Hunting organizations</li>
+              <li>Forestry</li>
+              <li>Landowners</li>
+              <li>Farmers</li>
+            </ul>
+          </li>
+
+          <li>Look for and negotiate inexpensive insurance</li>
+
+        </ul>
+
       </div>
 
       <div class="about-row">
@@ -179,6 +239,32 @@
   </footer>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
   <script src="script.js"></script>
+  <script>
+
+    const missionCard = document.getElementById('missionCard');
+    const missionDetails = document.getElementById('missionDetails');
+
+    missionCard.addEventListener('click', function (e) {
+
+      e.stopPropagation();
+
+      missionDetails.classList.toggle('open');
+
+    });
+
+    missionDetails.addEventListener('click', function (e) {
+
+      e.stopPropagation();
+
+    });
+
+    document.addEventListener('click', function () {
+
+      missionDetails.classList.remove('open');
+
+    });
+
+  </script>
 </body>
 
 </html>

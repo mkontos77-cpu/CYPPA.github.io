@@ -242,6 +242,12 @@ p {
   display: block;
 }
 
+.mobile-nav.open {
+  display: block !important;
+  background: red !important;
+  padding: 20px !important;
+}
+
 .mobile-nav nav {
   display: flex;
   flex-direction: column;
@@ -869,4 +875,38 @@ section.muted {
 
 .clickable-card:hover {
   transform: translateY(-4px);
+}
+
+/* Mission Statement Popup */
+
+.mission-card {
+  cursor: pointer;
+}
+
+.mission-details {
+  display: none;
+  margin-top: 15px;
+  margin-left: 80px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+  border: 1px solid rgba(0, 0, 0, .08);
+}
+
+.mission-details.open {
+  display: block;
+}
+
+.mission-details h3 {
+  margin-top: 0;
+}
+
+.mission-details ul {
+  padding-left: 20px;
 }
