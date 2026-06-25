@@ -28,9 +28,8 @@
           href="about.html" class="active">About</a><a href="contact.html">Contact</a>
         <a class="btn btn-primary" href="login.html" style="margin-left:.75rem">Members Login</a>
       </nav>
-      <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('open')"
-        aria-label="Toggle menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="4" y1="6" x2="20" y2="6" />
           <line x1="4" y1="12" x2="20" y2="12" />
           <line x1="4" y1="18" x2="20" y2="18" />
@@ -44,19 +43,7 @@
       </nav>
     </div>
   </header>
-  <div class="mobile-nav">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cy-air-space.html">CY-Air Space</a>
-      <a href="training.html">Training</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
 
-      <a class="btn btn-primary" href="login.html">
-        Members Login
-      </a>
-    </nav>
-  </div>
   <section class="page-hero">
 
     <img src="assets/Logo 01a Color.png" alt="" class="hero-watermark" aria-hidden="true" />
@@ -130,7 +117,7 @@
         </div>
       </div>
 
-      <div class="mission-details" id="missionDetails">
+      <div class="mission-details" id="missionDetails" style="position:relative; z-index:1;">
 
         <h3>The Core Mission of CYPPA</h3>
 
@@ -244,25 +231,29 @@
     const missionCard = document.getElementById('missionCard');
     const missionDetails = document.getElementById('missionDetails');
 
-    missionCard.addEventListener('click', function (e) {
+    if (missionCard && missionDetails) {
 
-      e.stopPropagation();
+      missionCard.addEventListener('click', function (e) {
 
-      missionDetails.classList.toggle('open');
+        e.stopPropagation();
 
-    });
+        missionDetails.classList.toggle('open');
 
-    missionDetails.addEventListener('click', function (e) {
+      });
 
-      e.stopPropagation();
+      missionDetails.addEventListener('click', function (e) {
 
-    });
+        e.stopPropagation();
 
-    document.addEventListener('click', function () {
+      });
 
-      missionDetails.classList.remove('open');
+      document.addEventListener('click', function () {
 
-    });
+        missionDetails.classList.remove('open');
+
+      });
+
+    }
 
   </script>
 </body>

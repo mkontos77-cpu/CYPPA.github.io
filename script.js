@@ -7,9 +7,29 @@
 
   const toggle = document.querySelector('.menu-toggle');
   const mobile = document.querySelector('.mobile-nav');
+
   if (toggle && mobile) {
-    toggle.addEventListener('click', () => mobile.classList.toggle('open'));
-    mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobile.classList.remove('open')));
+
+    toggle.addEventListener('click', function () {
+
+      if (mobile.style.display === 'block') {
+        mobile.style.display = 'none';
+      } else {
+        mobile.style.display = 'block';
+      }
+
+    });
+
+    mobile.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', function () {
+
+        mobile.style.display = 'none';
+
+      });
+
+    });
+
   }
 
   // Mark active link based on pathname
@@ -19,3 +39,18 @@
     if (href === path) a.classList.add('active');
   });
 })();
+document.addEventListener('click', function (e) {
+
+  const mobile = document.querySelector('.mobile-nav');
+  const toggle = document.querySelector('.menu-toggle');
+
+  if (!mobile || !toggle) return;
+
+  if (
+    !mobile.contains(e.target) &&
+    !toggle.contains(e.target)
+  ) {
+    mobile.style.display = 'none';
+  }
+
+});

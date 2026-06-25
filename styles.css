@@ -242,12 +242,6 @@ p {
   display: block;
 }
 
-.mobile-nav.open {
-  display: block !important;
-  background: red !important;
-  padding: 20px !important;
-}
-
 .mobile-nav nav {
   display: flex;
   flex-direction: column;
@@ -775,18 +769,6 @@ section.muted {
   margin-top: 1.5rem;
 }
 
-.header-logo {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
-  margin-right: 12px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-}
-
 /* =====================================================
    CYPPA LOGO WATERMARK - HOME + ALL INTERIOR PAGES
    ===================================================== */
@@ -796,11 +778,6 @@ section.muted {
   width: auto;
   object-fit: contain;
   margin-right: 12px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
 }
 
 /* Home Hero */
@@ -909,4 +886,49 @@ section.muted {
 
 .mission-details ul {
   padding-left: 20px;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  background: #fff;
+  border-top: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+
+  z-index: 99999;
+}
+
+.mobile-nav.open {
+  display: block !important;
+}
+
+@media (max-width:600px) {
+
+  .mission-details {
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width:600px) {
+
+  .header-logo {
+    height: 40px;
+  }
+
+}
+
+.site-header {
+  z-index: 10000;
+}
+
+.menu-toggle {
+  position: relative;
+  z-index: 10001;
 }
